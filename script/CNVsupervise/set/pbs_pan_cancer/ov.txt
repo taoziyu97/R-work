@@ -1,0 +1,12 @@
+#PBS -N ov_new
+#PBS -l nodes=2:ppn=20
+#PBS -l walltime=700:00:00
+#PBS -S /bin/bash
+#PBS -j oe
+#PBS -q slst_pub
+
+source activate R_36
+
+out_dir=/public/home/liuxs/taozy/doabsolute/result/result_new
+
+Rscript /public/home/liuxs/taozy/doabsolute/script/rscript_new/doabsolute_ov.R

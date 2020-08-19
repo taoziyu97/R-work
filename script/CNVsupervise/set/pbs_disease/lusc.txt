@@ -1,0 +1,12 @@
+#PBS -N coad
+#PBS -l nodes=2:ppn=20
+#PBS -l walltime=700000:00:00
+#PBS -S /bin/bash
+#PBS -j oe
+#PBS -q normal_8
+
+source activate R_36
+
+out_dir=/public/home/liuxs/taozy/doabsolute/result
+
+Rscript /public/home/liuxs/taozy/doabsolute/script/doabsolute_lusc.R
